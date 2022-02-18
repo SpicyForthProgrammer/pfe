@@ -1,10 +1,10 @@
 PUB=pub/
 
 autoreconf:
-	autoreconf -i -f
-	cd testmodule1 && autoreconf -i -f
-	cd testmodule2 && autoreconf -i -f
-
+	
+	cd testmodule1 && autoreconf -i -v -f
+	cd testmodule2 && autoreconf -i -v -f
+	autoreconf -i -v -f
 auto:
 	aclocal -I uses && autoconf && automake
 	(cd pfe && aclocal -I ../uses && autoconf && automake)
